@@ -8,6 +8,5 @@ For further terms, please read the license file attached in this Git.
 # Version 1.0 - initial commit.
 What's new:
 - added main menu GUI to game files
-- added a preload image to game files
-- created variable storage for character species, gold and HP
-- Added a save and load feature in code.
+- created variable storage for character species and gold
+- Added a save and load GUI
