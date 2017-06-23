@@ -57,7 +57,7 @@
       <TextWindowGUI>0</TextWindowGUI>
       <AlwaysDisplayTextAsSpeech>False</AlwaysDisplayTextAsSpeech>
       <FontsForHiRes>False</FontsForHiRes>
-      <AntiAliasFonts>False</AntiAliasFonts>
+      <AntiAliasFonts>True</AntiAliasFonts>
       <ThoughtGUI>0</ThoughtGUI>
       <BackwardsText>False</BackwardsText>
       <MaximumScore>0</MaximumScore>
@@ -74,7 +74,7 @@
       <SaveGameFileExtension>pheradv</SaveGameFileExtension>
       <SaveGameFolderName>Pherian</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>0</AudioIndexer>
+      <AudioIndexer>1</AudioIndexer>
       <BuildTargets>Windows</BuildTargets>
     </Settings>
     <LipSync>
@@ -620,6 +620,10 @@
             <Number>2</Number>
             <Description xml:space="preserve">Character Creation</Description>
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>3</Number>
+            <Description>Carriage1</Description>
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -637,33 +641,33 @@
                   <Left>0</Left>
                   <Top>0</Top>
                   <Clickable>True</Clickable>
-                  <Visibility>Normal</Visibility>
+                  <Visibility>NormalButInitiallyOff</Visibility>
                   <PopupYPos>0</PopupYPos>
                   <ZOrder>0</ZOrder>
                   <BorderColor>0</BorderColor>
                   <Transparency>0</Transparency>
                   <BackgroundColor>0</BackgroundColor>
-                  <BackgroundImage>1</BackgroundImage>
+                  <BackgroundImage>0</BackgroundImage>
                   <ID>0</ID>
                   <Name>gmainMenu</Name>
                 </NormalGUI>
                 <Controls>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>65535</TextColor>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <Text xml:space="preserve">Alpha 1.0</Text>
                     <Height>27</Height>
                     <Locked>False</Locked>
                     <Width>171</Width>
-                    <Left>43</Left>
-                    <Top>37</Top>
+                    <Left>1149</Left>
+                    <Top>15</Top>
                     <ZOrder>0</ZOrder>
                     <ID>0</ID>
                     <Name>Label1</Name>
                   </GUILabel>
                   <GUIButton>
-                    <OnClick />
+                    <OnClick>newGameButton_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -674,17 +678,17 @@
                     <MouseoverImage>0</MouseoverImage>
                     <Image>0</Image>
                     <Text xml:space="preserve">New Game</Text>
-                    <Height>75</Height>
+                    <Height>74</Height>
                     <Locked>False</Locked>
-                    <Width>311</Width>
+                    <Width>313</Width>
                     <Left>480</Left>
-                    <Top>254</Top>
+                    <Top>258</Top>
                     <ZOrder>1</ZOrder>
                     <ID>1</ID>
                     <Name>newGameButton</Name>
                   </GUIButton>
                   <GUIButton>
-                    <OnClick />
+                    <OnClick>loadGameButton_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -828,32 +832,34 @@
                   <BorderColor>0</BorderColor>
                   <Transparency>0</Transparency>
                   <BackgroundColor>0</BackgroundColor>
-                  <BackgroundImage>3</BackgroundImage>
+                  <BackgroundImage>6</BackgroundImage>
                   <ID>2</ID>
-                  <Name>gSaveGame</Name>
+                  <Name>gSavegame</Name>
                 </NormalGUI>
                 <Controls>
-                  <GUIListBox>
-                    <OnSelectionChanged />
-                    <ShowScrollArrows>True</ShowScrollArrows>
-                    <ShowBorder>True</ShowBorder>
-                    <TextAlignment>Left</TextAlignment>
-                    <TextColor>33808</TextColor>
-                    <SelectedTextColor>7</SelectedTextColor>
-                    <SelectedBackgroundColor>16904</SelectedBackgroundColor>
+                  <GUIButton>
+                    <OnClick>btnConfirmSave_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Translated>True</Translated>
-                    <Height>314</Height>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Save Game</Text>
+                    <Height>83</Height>
                     <Locked>False</Locked>
-                    <Width>457</Width>
-                    <Left>216</Left>
-                    <Top>127</Top>
+                    <Width>270</Width>
+                    <Left>918</Left>
+                    <Top>248</Top>
                     <ZOrder>0</ZOrder>
                     <ID>0</ID>
-                    <Name>ListBox1</Name>
-                  </GUIListBox>
+                    <Name>btnConfirmSave</Name>
+                  </GUIButton>
                   <GUIButton>
-                    <OnClick />
+                    <OnClick>btnDeleteSave_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -863,39 +869,18 @@
                     <PushedImage>0</PushedImage>
                     <MouseoverImage>0</MouseoverImage>
                     <Image>0</Image>
-                    <Text xml:space="preserve">Save game</Text>
-                    <Height>41</Height>
+                    <Text xml:space="preserve">Delete Save</Text>
+                    <Height>83</Height>
                     <Locked>False</Locked>
-                    <Width>204</Width>
-                    <Left>751</Left>
-                    <Top>157</Top>
+                    <Width>270</Width>
+                    <Left>918</Left>
+                    <Top>383</Top>
                     <ZOrder>1</ZOrder>
                     <ID>1</ID>
-                    <Name>Button2</Name>
+                    <Name>btnDeleteSave</Name>
                   </GUIButton>
                   <GUIButton>
-                    <OnClick />
-                    <ClickAction>RunScript</ClickAction>
-                    <NewModeNumber>0</NewModeNumber>
-                    <ClipImage>False</ClipImage>
-                    <TextAlignment>Centred</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <PushedImage>0</PushedImage>
-                    <MouseoverImage>0</MouseoverImage>
-                    <Image>0</Image>
-                    <Text xml:space="preserve">Delete save</Text>
-                    <Height>41</Height>
-                    <Locked>False</Locked>
-                    <Width>204</Width>
-                    <Left>751</Left>
-                    <Top>212</Top>
-                    <ZOrder>2</ZOrder>
-                    <ID>2</ID>
-                    <Name>Button3</Name>
-                  </GUIButton>
-                  <GUIButton>
-                    <OnClick>Button4_OnClick</OnClick>
+                    <OnClick>btnCancelSave_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -906,29 +891,48 @@
                     <MouseoverImage>0</MouseoverImage>
                     <Image>0</Image>
                     <Text>Cancel</Text>
-                    <Height>41</Height>
+                    <Height>83</Height>
                     <Locked>False</Locked>
-                    <Width>204</Width>
-                    <Left>751</Left>
-                    <Top>268</Top>
+                    <Width>270</Width>
+                    <Left>918</Left>
+                    <Top>519</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>btnCancelSave</Name>
+                  </GUIButton>
+                  <GUIListBox>
+                    <OnSelectionChanged>lstSaveGames_OnSelectionChange</OnSelectionChanged>
+                    <ShowScrollArrows>True</ShowScrollArrows>
+                    <ShowBorder>True</ShowBorder>
+                    <TextAlignment>Left</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <SelectedTextColor>65535</SelectedTextColor>
+                    <SelectedBackgroundColor>16904</SelectedBackgroundColor>
+                    <Font>0</Font>
+                    <Translated>True</Translated>
+                    <Height>356</Height>
+                    <Locked>False</Locked>
+                    <Width>831</Width>
+                    <Left>35</Left>
+                    <Top>248</Top>
                     <ZOrder>3</ZOrder>
                     <ID>3</ID>
-                    <Name>Button4</Name>
-                  </GUIButton>
+                    <Name>lstSaveGames</Name>
+                  </GUIListBox>
                   <GUITextBox>
                     <OnActivate />
-                    <TextColor>65535</TextColor>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <ShowBorder>True</ShowBorder>
                     <Text />
-                    <Height>34</Height>
+                    <Height>33</Height>
                     <Locked>False</Locked>
-                    <Width>459</Width>
-                    <Left>216</Left>
-                    <Top>88</Top>
+                    <Width>832</Width>
+                    <Left>35</Left>
+                    <Top>204</Top>
                     <ZOrder>4</ZOrder>
                     <ID>4</ID>
-                    <Name>TextBox1</Name>
+                    <Name>txtSaveName</Name>
                   </GUITextBox>
                 </Controls>
               </GUIMain>
@@ -940,38 +944,40 @@
                   <Left>0</Left>
                   <Top>0</Top>
                   <Clickable>True</Clickable>
-                  <Visibility>Normal</Visibility>
+                  <Visibility>NormalButInitiallyOff</Visibility>
                   <PopupYPos>0</PopupYPos>
                   <ZOrder>0</ZOrder>
                   <BorderColor>0</BorderColor>
                   <Transparency>0</Transparency>
                   <BackgroundColor>0</BackgroundColor>
-                  <BackgroundImage>4</BackgroundImage>
+                  <BackgroundImage>7</BackgroundImage>
                   <ID>3</ID>
-                  <Name>gLoadGame</Name>
+                  <Name>gLoadgame</Name>
                 </NormalGUI>
                 <Controls>
-                  <GUIListBox>
-                    <OnSelectionChanged />
-                    <ShowScrollArrows>True</ShowScrollArrows>
-                    <ShowBorder>True</ShowBorder>
-                    <TextAlignment>Left</TextAlignment>
-                    <TextColor>33808</TextColor>
-                    <SelectedTextColor>7</SelectedTextColor>
-                    <SelectedBackgroundColor>16904</SelectedBackgroundColor>
+                  <GUIButton>
+                    <OnClick>btnConfirmLoad_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Translated>True</Translated>
-                    <Height>314</Height>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Load Game</Text>
+                    <Height>83</Height>
                     <Locked>False</Locked>
-                    <Width>457</Width>
-                    <Left>216</Left>
-                    <Top>127</Top>
+                    <Width>270</Width>
+                    <Left>897</Left>
+                    <Top>245</Top>
                     <ZOrder>0</ZOrder>
                     <ID>0</ID>
-                    <Name>ListBox12</Name>
-                  </GUIListBox>
+                    <Name>btnConfirmLoad</Name>
+                  </GUIButton>
                   <GUIButton>
-                    <OnClick />
+                    <OnClick>btnDeleteLoad_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -981,39 +987,18 @@
                     <PushedImage>0</PushedImage>
                     <MouseoverImage>0</MouseoverImage>
                     <Image>0</Image>
-                    <Text xml:space="preserve">Load game</Text>
-                    <Height>41</Height>
+                    <Text xml:space="preserve">Delete Save</Text>
+                    <Height>83</Height>
                     <Locked>False</Locked>
-                    <Width>204</Width>
-                    <Left>751</Left>
-                    <Top>157</Top>
+                    <Width>270</Width>
+                    <Left>897</Left>
+                    <Top>380</Top>
                     <ZOrder>1</ZOrder>
                     <ID>1</ID>
-                    <Name>Button22</Name>
+                    <Name>btnDeleteLoad</Name>
                   </GUIButton>
                   <GUIButton>
-                    <OnClick />
-                    <ClickAction>RunScript</ClickAction>
-                    <NewModeNumber>0</NewModeNumber>
-                    <ClipImage>False</ClipImage>
-                    <TextAlignment>Centred</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <PushedImage>0</PushedImage>
-                    <MouseoverImage>0</MouseoverImage>
-                    <Image>0</Image>
-                    <Text xml:space="preserve">Delete save</Text>
-                    <Height>41</Height>
-                    <Locked>False</Locked>
-                    <Width>204</Width>
-                    <Left>751</Left>
-                    <Top>212</Top>
-                    <ZOrder>2</ZOrder>
-                    <ID>2</ID>
-                    <Name>Button32</Name>
-                  </GUIButton>
-                  <GUIButton>
-                    <OnClick>Button42_OnClick</OnClick>
+                    <OnClick>btnCancelLoad_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -1024,30 +1009,719 @@
                     <MouseoverImage>0</MouseoverImage>
                     <Image>0</Image>
                     <Text>Cancel</Text>
-                    <Height>41</Height>
+                    <Height>83</Height>
                     <Locked>False</Locked>
-                    <Width>204</Width>
-                    <Left>751</Left>
-                    <Top>268</Top>
+                    <Width>270</Width>
+                    <Left>897</Left>
+                    <Top>516</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>btnCancelLoad</Name>
+                  </GUIButton>
+                  <GUIListBox>
+                    <OnSelectionChanged>lstSaveGames_OnSelectionChange</OnSelectionChanged>
+                    <ShowScrollArrows>True</ShowScrollArrows>
+                    <ShowBorder>True</ShowBorder>
+                    <TextAlignment>Left</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <SelectedTextColor>65535</SelectedTextColor>
+                    <SelectedBackgroundColor>16904</SelectedBackgroundColor>
+                    <Font>0</Font>
+                    <Translated>True</Translated>
+                    <Height>356</Height>
+                    <Locked>False</Locked>
+                    <Width>831</Width>
+                    <Left>36</Left>
+                    <Top>245</Top>
                     <ZOrder>3</ZOrder>
                     <ID>3</ID>
-                    <Name>Button42</Name>
-                  </GUIButton>
+                    <Name>lstLoadGames</Name>
+                  </GUIListBox>
                   <GUITextBox>
-                    <OnActivate />
-                    <TextColor>65535</TextColor>
+                    <OnActivate>txtLoadName_OnActivate</OnActivate>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <ShowBorder>True</ShowBorder>
                     <Text />
-                    <Height>30</Height>
+                    <Height>33</Height>
                     <Locked>False</Locked>
-                    <Width>459</Width>
-                    <Left>216</Left>
-                    <Top>88</Top>
+                    <Width>832</Width>
+                    <Left>36</Left>
+                    <Top>206</Top>
                     <ZOrder>4</ZOrder>
                     <ID>4</ID>
-                    <Name>TextBox12</Name>
+                    <Name>txtLoadName</Name>
                   </GUITextBox>
+                </Controls>
+              </GUIMain>
+            </GUIs>
+          </GUIFolder>
+          <GUIFolder Name="character creation">
+            <SubFolders />
+            <GUIs>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>720</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>0</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>4</ID>
+                  <Name>gcc1</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUIButton>
+                    <OnClick>btnFox_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Fox</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>183</Left>
+                    <Top>116</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>btnFox</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnWolf_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Wolf</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>183</Left>
+                    <Top>206</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>btnWolf</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnDog_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Dog</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>183</Left>
+                    <Top>296</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>btnDog</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnDragon_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Dragon</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>183</Left>
+                    <Top>386</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>btnDragon</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnCat_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Cat</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>183</Left>
+                    <Top>476</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>btnCat</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnTiger_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Tiger</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>183</Left>
+                    <Top>566</Top>
+                    <ZOrder>5</ZOrder>
+                    <ID>5</ID>
+                    <Name>btnTiger</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnLion_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Lion</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>368</Left>
+                    <Top>116</Top>
+                    <ZOrder>6</ZOrder>
+                    <ID>6</ID>
+                    <Name>btnLion</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnRaccoon_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Raccoon</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>368</Left>
+                    <Top>206</Top>
+                    <ZOrder>7</ZOrder>
+                    <ID>7</ID>
+                    <Name>btnRaccoon</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnRabbit_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Rabbit</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>368</Left>
+                    <Top>296</Top>
+                    <ZOrder>8</ZOrder>
+                    <ID>8</ID>
+                    <Name>btnRabbit</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnSkunk_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Skunk</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>368</Left>
+                    <Top>386</Top>
+                    <ZOrder>9</ZOrder>
+                    <ID>9</ID>
+                    <Name>btnSkunk</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnBear_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Bear</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>368</Left>
+                    <Top>476</Top>
+                    <ZOrder>10</ZOrder>
+                    <ID>10</ID>
+                    <Name>btnBear</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnOtter_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Otter</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>368</Left>
+                    <Top>566</Top>
+                    <ZOrder>11</ZOrder>
+                    <ID>11</ID>
+                    <Name>btnOtter</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnHorse_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Horse</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>552</Left>
+                    <Top>116</Top>
+                    <ZOrder>12</ZOrder>
+                    <ID>12</ID>
+                    <Name>btnHorse</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnCoyote_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Coyote</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>552</Left>
+                    <Top>206</Top>
+                    <ZOrder>13</ZOrder>
+                    <ID>13</ID>
+                    <Name>btnCoyote</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnCheeta_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Cheetah</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>552</Left>
+                    <Top>296</Top>
+                    <ZOrder>14</ZOrder>
+                    <ID>14</ID>
+                    <Name>btnCheeta</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnHyena_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Hyena</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>552</Left>
+                    <Top>386</Top>
+                    <ZOrder>15</ZOrder>
+                    <ID>15</ID>
+                    <Name>btnHyena</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnSLeopard_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Snow Leopard</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>552</Left>
+                    <Top>476</Top>
+                    <ZOrder>16</ZOrder>
+                    <ID>16</ID>
+                    <Name>btnSLeopard</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnKangaroo_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Kangaroo</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>552</Left>
+                    <Top>566</Top>
+                    <ZOrder>17</ZOrder>
+                    <ID>17</ID>
+                    <Name>btnKangaroo</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnCrow_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Crow</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>734</Left>
+                    <Top>116</Top>
+                    <ZOrder>18</ZOrder>
+                    <ID>18</ID>
+                    <Name>btnCrow</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnRat_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Rat</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>734</Left>
+                    <Top>206</Top>
+                    <ZOrder>19</ZOrder>
+                    <ID>19</ID>
+                    <Name>btnRat</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnParrot_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Parrot</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>734</Left>
+                    <Top>296</Top>
+                    <ZOrder>20</ZOrder>
+                    <ID>20</ID>
+                    <Name>btnParrot</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnCrux_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Crux</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>734</Left>
+                    <Top>386</Top>
+                    <ZOrder>21</ZOrder>
+                    <ID>21</ID>
+                    <Name>btnCrux</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnCougar_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Cougar</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>734</Left>
+                    <Top>476</Top>
+                    <ZOrder>22</ZOrder>
+                    <ID>22</ID>
+                    <Name>btnCougar</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnFerret_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Ferret</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>734</Left>
+                    <Top>566</Top>
+                    <ZOrder>23</ZOrder>
+                    <ID>23</ID>
+                    <Name>btnFerret</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnGryphon_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Gryphon</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>914</Left>
+                    <Top>116</Top>
+                    <ZOrder>24</ZOrder>
+                    <ID>24</ID>
+                    <Name>btnGryphon</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnLeopard_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Leopard</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>914</Left>
+                    <Top>206</Top>
+                    <ZOrder>25</ZOrder>
+                    <ID>25</ID>
+                    <Name>btnLeopard</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnLynx_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Lynx</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>914</Left>
+                    <Top>296</Top>
+                    <ZOrder>26</ZOrder>
+                    <ID>26</ID>
+                    <Name>btnLynx</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnGecko_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Gecko</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>914</Left>
+                    <Top>386</Top>
+                    <ZOrder>27</ZOrder>
+                    <ID>27</ID>
+                    <Name>btnGecko</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnRaptor_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Raptor</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>914</Left>
+                    <Top>476</Top>
+                    <ZOrder>28</ZOrder>
+                    <ID>28</ID>
+                    <Name>btnRaptor</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnKobold_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Kobold</Text>
+                    <Height>72</Height>
+                    <Locked>False</Locked>
+                    <Width>163</Width>
+                    <Left>914</Left>
+                    <Top>566</Top>
+                    <ZOrder>29</ZOrder>
+                    <ID>29</ID>
+                    <Name>btnKobold</Name>
+                  </GUIButton>
+                  <GUILabel>
+                    <TextAlignment>TopMiddle</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>1</Font>
+                    <Text xml:space="preserve">Choose your species.</Text>
+                    <Height>81</Height>
+                    <Locked>False</Locked>
+                    <Width>716</Width>
+                    <Left>288</Left>
+                    <Top>29</Top>
+                    <ZOrder>30</ZOrder>
+                    <ID>30</ID>
+                    <Name>Label2</Name>
+                  </GUILabel>
                 </Controls>
               </GUIMain>
             </GUIs>
@@ -1250,7 +1924,7 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
             <Solid>True</Solid>
-            <Clickable>True</Clickable>
+            <Clickable>False</Clickable>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -1405,27 +2079,27 @@
     <Fonts>
       <Font>
         <ID>0</ID>
-        <PointSize>0</PointSize>
+        <PointSize>12</PointSize>
         <Name xml:space="preserve">Font 0</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename />
+        <SourceFilename>assets/Cardo-Regular.ttf</SourceFilename>
       </Font>
       <Font>
         <ID>1</ID>
-        <PointSize>0</PointSize>
+        <PointSize>16</PointSize>
         <Name xml:space="preserve">Font 1</Name>
         <OutlineFont>2</OutlineFont>
         <OutlineStyle>UseOutlineFont</OutlineStyle>
-        <SourceFilename />
+        <SourceFilename>assets/Cardo-Bold.ttf</SourceFilename>
       </Font>
       <Font>
         <ID>2</ID>
-        <PointSize>0</PointSize>
+        <PointSize>10</PointSize>
         <Name xml:space="preserve">Font 2</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename />
+        <SourceFilename>assets/invisible1.ttf</SourceFilename>
       </Font>
     </Fonts>
     <Palette>
@@ -1698,12 +2372,18 @@
               <Sprite Slot="4" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False" />
             </Sprites>
           </SpriteFolder>
+          <SpriteFolder Name="gSavegameImport">
+            <SubFolders />
+            <Sprites>
+              <Sprite Slot="5" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False" />
+            </Sprites>
+          </SpriteFolder>
         </SubFolders>
         <Sprites>
           <Sprite Slot="0" Width="1" Height="1" ColorDepth="8" Resolution="LowRes" AlphaChannel="False" />
           <Sprite Slot="1" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
             <Source>
-              <FileName>C:\Users\Centinu Software\Desktop\pherian assets\menuBG.png</FileName>
+              <FileName>assets/mainMenuBG.jpg</FileName>
             </Source>
           </Sprite>
           <Sprite Slot="2" Width="32" Height="32" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
@@ -1714,6 +2394,26 @@
           <Sprite Slot="3" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
             <Source>
               <FileName>C:\Users\Centinu Software\Desktop\pherian assets\blackout.png</FileName>
+            </Source>
+          </Sprite>
+          <Sprite Slot="6" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+            <Source>
+              <FileName>assets/saveBG.jpg</FileName>
+            </Source>
+          </Sprite>
+          <Sprite Slot="7" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+            <Source>
+              <FileName>assets/loadBG.jpg</FileName>
+            </Source>
+          </Sprite>
+          <Sprite Slot="8" Width="1848" Height="457" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+            <Source>
+              <FileName>assets/button.png</FileName>
+            </Source>
+          </Sprite>
+          <Sprite Slot="9" Width="1848" Height="457" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+            <Source>
+              <FileName>assets/buttonhover.png</FileName>
             </Source>
           </Sprite>
         </Sprites>
@@ -1835,7 +2535,20 @@
           </AudioClipFolder>
           <AudioClipFolder Name="Sounds">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <ScriptName>aAction</ScriptName>
+                <SourceFileName>assets/action.wav</SourceFileName>
+                <Index>1</Index>
+                <Type>3</Type>
+                <BundlingType>InGameEXE</BundlingType>
+                <FileType>WAV</FileType>
+                <DefaultVolume>100</DefaultVolume>
+                <DefaultPriority>Normal</DefaultPriority>
+                <DefaultRepeat>False</DefaultRepeat>
+                <FileLastModifiedDate>2017-06-23 13:49:02Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultVolume>100</DefaultVolume>
               <DefaultPriority>Inherit</DefaultPriority>
