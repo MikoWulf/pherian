@@ -6,16 +6,25 @@ Any parties that wish to use the source code for Pherian, either in its entirity
 
 For further terms, please read the license file attached in this Git.
 
-# Version 1.4 - Codename: Hollpa
+# Version indev 1.8 - Codename: Fierce
 What's new:
-- changed ugly AGS Fonts out for a nice Serif font.
-- added an invisible font to stop the third blocky AGS font from randomly showing up.
-- added a proper species selector.
-- got rid of the black background and put in a nice old paper texture.
-- altered layout of the save and load GUI's.
-- added the first audio file to the game for button selection.
+- Added options screen
+- Added an in-game changelog screen with condensed information
+- Changed the colour of the background images
+- Changed layout of the save and load screen
+- Fixed the splash screen
+- Added copyrigfht stuff to the splash screen
+- Fixed location names in header, they're now dynamic depending on the location of the player
+- Altered layout of the main manu screen
+- Fixed problems with ome species buttons not taking you any further in the game
+- Added sound to each button
+- Added a new Amiga 1200 styled mouse cursor to the game instead of the crosshair
+- Added actual content to the game past the character creation screen
+- Added a "Brick wall" scene where the player is stopped from going further (Because there's nothing past this point... Yet)
 
 # What will be in the next commit?
-- First gameplay scene.
-- Visual representation of variables like Species and gold.
-- maybe some new buttons.
+- MORE GAMEPLAY. MORE STORY
+- a way to actually save your game and load it from within the game itself
+- Enhanced save games
+- Save game file extension
+- Double click saves to play in file explorer
