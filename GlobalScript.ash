@@ -4,3 +4,4 @@
 // scripts.
 import String gold;
 import String speciesName;
+import String placeContent;

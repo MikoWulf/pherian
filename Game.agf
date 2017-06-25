@@ -610,7 +610,34 @@
     <Plugins />
     <Rooms>
       <UnloadedRoomFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <UnloadedRoomFolder Name="Carriage to Pherian">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Number>3</Number>
+                <Description>Carriage1</Description>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Number>4</Number>
+                <Description xml:space="preserve">Shake Jax's hand</Description>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Number>5</Number>
+                <Description xml:space="preserve">Refuse handshake</Description>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="outside pherian">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Number>6</Number>
+                <Description xml:space="preserve">Outside Pherian 1</Description>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+        </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
             <Number>1</Number>
@@ -619,10 +646,6 @@
           <UnloadedRoom>
             <Number>2</Number>
             <Description xml:space="preserve">Character Creation</Description>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Number>3</Number>
-            <Description>Carriage1</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -656,7 +679,7 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">Alpha 1.0</Text>
+                    <Text xml:space="preserve">indev 1.8</Text>
                     <Height>27</Height>
                     <Locked>False</Locked>
                     <Width>171</Width>
@@ -681,8 +704,8 @@
                     <Height>74</Height>
                     <Locked>False</Locked>
                     <Width>313</Width>
-                    <Left>480</Left>
-                    <Top>258</Top>
+                    <Left>269</Left>
+                    <Top>259</Top>
                     <ZOrder>1</ZOrder>
                     <ID>1</ID>
                     <Name>newGameButton</Name>
@@ -702,7 +725,7 @@
                     <Height>75</Height>
                     <Locked>False</Locked>
                     <Width>311</Width>
-                    <Left>480</Left>
+                    <Left>269</Left>
                     <Top>375</Top>
                     <ZOrder>2</ZOrder>
                     <ID>2</ID>
@@ -723,12 +746,222 @@
                     <Height>75</Height>
                     <Locked>False</Locked>
                     <Width>311</Width>
-                    <Left>480</Left>
-                    <Top>494</Top>
+                    <Left>652</Left>
+                    <Top>375</Top>
                     <ZOrder>3</ZOrder>
                     <ID>3</ID>
                     <Name>Button1</Name>
                   </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnOptions_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Options</Text>
+                    <Height>75</Height>
+                    <Locked>False</Locked>
+                    <Width>311</Width>
+                    <Left>652</Left>
+                    <Top>259</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>btnOptions</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>Changelogmm_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Changelog</Text>
+                    <Height>75</Height>
+                    <Locked>False</Locked>
+                    <Width>311</Width>
+                    <Left>461</Left>
+                    <Top>517</Top>
+                    <ZOrder>5</ZOrder>
+                    <ID>5</ID>
+                    <Name>Changelogmm</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>720</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>0</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>11</BackgroundImage>
+                  <ID>10</ID>
+                  <Name>gChangelog</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Version: indev 1.8</Text>
+                    <Height>26</Height>
+                    <Locked>False</Locked>
+                    <Width>200</Width>
+                    <Left>87</Left>
+                    <Top>144</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label16</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">What's New:</Text>
+                    <Height>26</Height>
+                    <Locked>False</Locked>
+                    <Width>162</Width>
+                    <Left>87</Left>
+                    <Top>206</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label17</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">- added this screen :D</Text>
+                    <Height>39</Height>
+                    <Locked>False</Locked>
+                    <Width>326</Width>
+                    <Left>87</Left>
+                    <Top>262</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label18</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">- added an options screen</Text>
+                    <Height>39</Height>
+                    <Locked>False</Locked>
+                    <Width>326</Width>
+                    <Left>87</Left>
+                    <Top>296</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>Label19</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">- added first encounter with a main character (Jax)</Text>
+                    <Height>30</Height>
+                    <Locked>False</Locked>
+                    <Width>563</Width>
+                    <Left>87</Left>
+                    <Top>333</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>Label20</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">- added location name info to header</Text>
+                    <Height>30</Height>
+                    <Locked>False</Locked>
+                    <Width>563</Width>
+                    <Left>87</Left>
+                    <Top>374</Top>
+                    <ZOrder>5</ZOrder>
+                    <ID>5</ID>
+                    <Name>Label21</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>btnChangeBack_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Back</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>531</Left>
+                    <Top>579</Top>
+                    <ZOrder>6</ZOrder>
+                    <ID>6</ID>
+                    <Name>btnChangeBack</Name>
+                  </GUIButton>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text>TODO:</Text>
+                    <Height>26</Height>
+                    <Locked>False</Locked>
+                    <Width>162</Width>
+                    <Left>774</Left>
+                    <Top>206</Top>
+                    <ZOrder>7</ZOrder>
+                    <ID>7</ID>
+                    <Name>Label22</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">- expand story to inside of the city</Text>
+                    <Height>38</Height>
+                    <Locked>False</Locked>
+                    <Width>389</Width>
+                    <Left>774</Left>
+                    <Top>262</Top>
+                    <ZOrder>8</ZOrder>
+                    <ID>8</ID>
+                    <Name>Label23</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">- add a way to actually save your game.</Text>
+                    <Height>38</Height>
+                    <Locked>False</Locked>
+                    <Width>457</Width>
+                    <Left>774</Left>
+                    <Top>296</Top>
+                    <ZOrder>9</ZOrder>
+                    <ID>9</ID>
+                    <Name>Label24</Name>
+                  </GUILabel>
                 </Controls>
               </GUIMain>
             </GUIs>
@@ -738,7 +971,7 @@
             <GUIs>
               <GUIMain>
                 <NormalGUI>
-                  <OnClick />
+                  <OnClick>gGui1_OnClick</OnClick>
                   <Height>30</Height>
                   <Width>1280</Width>
                   <Left>0</Left>
@@ -747,9 +980,9 @@
                   <Visibility>NormalButInitiallyOff</Visibility>
                   <PopupYPos>0</PopupYPos>
                   <ZOrder>0</ZOrder>
-                  <BorderColor>2</BorderColor>
+                  <BorderColor>0</BorderColor>
                   <Transparency>0</Transparency>
-                  <BackgroundColor>8</BackgroundColor>
+                  <BackgroundColor>0</BackgroundColor>
                   <BackgroundImage>0</BackgroundImage>
                   <ID>1</ID>
                   <Name>gGui1</Name>
@@ -757,59 +990,87 @@
                 <Controls>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>65535</TextColor>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <Text xml:space="preserve">Gold: </Text>
-                    <Height>18</Height>
+                    <Height>17</Height>
                     <Locked>False</Locked>
-                    <Width>55</Width>
-                    <Left>5</Left>
-                    <Top>4</Top>
+                    <Width>72</Width>
+                    <Left>6</Left>
+                    <Top>0</Top>
                     <ZOrder>0</ZOrder>
                     <ID>0</ID>
                     <Name>GoldLabel</Name>
                   </GUILabel>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>65535</TextColor>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <Text xml:space="preserve">New Label</Text>
-                    <Height>20</Height>
+                    <Height>22</Height>
                     <Locked>False</Locked>
-                    <Width>144</Width>
-                    <Left>59</Left>
-                    <Top>4</Top>
+                    <Width>585</Width>
+                    <Left>68</Left>
+                    <Top>0</Top>
                     <ZOrder>1</ZOrder>
                     <ID>1</ID>
                     <Name>goldContent</Name>
                   </GUILabel>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>65535</TextColor>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <Text>Species:</Text>
-                    <Height>21</Height>
+                    <Height>23</Height>
                     <Locked>False</Locked>
-                    <Width>76</Width>
-                    <Left>271</Left>
-                    <Top>3</Top>
+                    <Width>86</Width>
+                    <Left>264</Left>
+                    <Top>0</Top>
                     <ZOrder>2</ZOrder>
                     <ID>2</ID>
                     <Name>speciesLabel</Name>
                   </GUILabel>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>65535</TextColor>
+                    <TextColor>0</TextColor>
                     <Font>0</Font>
                     <Text>Label</Text>
-                    <Height>20</Height>
+                    <Height>23</Height>
                     <Locked>False</Locked>
-                    <Width>261</Width>
-                    <Left>353</Left>
-                    <Top>3</Top>
+                    <Width>167</Width>
+                    <Left>351</Left>
+                    <Top>0</Top>
                     <ZOrder>3</ZOrder>
                     <ID>3</ID>
                     <Name>speciesContent</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Location: </Text>
+                    <Height>24</Height>
+                    <Locked>False</Locked>
+                    <Width>104</Width>
+                    <Left>580</Left>
+                    <Top>0</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>Label3</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text>Label</Text>
+                    <Height>30</Height>
+                    <Locked>False</Locked>
+                    <Width>372</Width>
+                    <Left>683</Left>
+                    <Top>0</Top>
+                    <ZOrder>5</ZOrder>
+                    <ID>5</ID>
+                    <Name>locationLabel</Name>
                   </GUILabel>
                 </Controls>
               </GUIMain>
@@ -1726,8 +1987,430 @@
               </GUIMain>
             </GUIs>
           </GUIFolder>
+          <GUIFolder Name="Carriage to Pherian">
+            <SubFolders />
+            <GUIs>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>5</ID>
+                  <Name>gcarPher1</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">You sit in a rather run down carriage being pulled by large feral beasts. Your transport probably started its life out as a luxurious four passenger cart but it's currently carrying 7 passengers, including yourself along the meandering paths of Casan, towards Pherian, the Capital City. They each carry their own cargo. Some carry many chests full of wares, others carry a lot less, but from what you can see, they are of a much higher quality. The coachman stops in a small village on the borderlands of Kahm as a small kobold hops into the wagon and politely budges his way into a small space between an arctic fox and a rather large bear.</Text>
+                    <Height>139</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label4</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"The name's Jax," the kobold boasts, holding his hand outstretched in your direction. Everyone in the carriage turns to look at the small creature. You wager that he must be roughly 2 feet tall and even that's when he's wearing his shoes.</Text>
+                    <Height>86</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>277</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label5</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>btnshakeHands1_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Shake Jax's hand</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>499</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>btnshakeHands1</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnRefuseShakeHands1_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Refuse to shake hands</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>301</Left>
+                    <Top>499</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>btnRefuseShakeHands1</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>0</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>6</ID>
+                  <Name>gcarPherhandshake</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">You lean over a large trunk of goods in the gangway of the carriage in order to shake the Kobold's hand. Even though he's small, he's certainly strong. Without noticing, he grips your hand like a vice, crushing your fingers as you grin and pull an odd face just to stop youself screaming out in pain.</Text>
+                    <Height>97</Height>
+                    <Locked>False</Locked>
+                    <Width>1244</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label6</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Jax finally realises his mistake and releases you from his grip but not before nearly shaking your shoulder from your socket. "Apologies, friend." he says. "I'm the smallest and strongest of my clutch. It's been both a blessing and a curse." The other passengers stare silently at the two of you, frozen in a state of shock and awe.</Text>
+                    <Height>88</Height>
+                    <Locked>False</Locked>
+                    <Width>1250</Width>
+                    <Left>18</Left>
+                    <Top>207</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label7</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"That was incredible." A crow to your left states in amazement. "You nearly broke their hand." His eyes flick back and forth between the two of you. and his eyes finally rest on your hand as you cradle it, trying to stop the throbbing pain. He goes to open his mouth again but is interupted by the guard as she slides a small door open, letting the outside world slowly filter into the cabin.</Text>
+                    <Height>112</Height>
+                    <Locked>False</Locked>
+                    <Width>1249</Width>
+                    <Left>18</Left>
+                    <Top>304</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label8</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"We're approaching the capital sooner than we planned. collect your belongings and be ready to depart." She slides the small door shut again before the people in the carriage, seemingly all at once, begin to wrestle for their items. Accusations of theft and the snarling of more aggresive travellers fills the air as the carriage wobbles from side to side.</Text>
+                    <Height>112</Height>
+                    <Locked>False</Locked>
+                    <Width>1249</Width>
+                    <Left>18</Left>
+                    <Top>432</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>Label9</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>Button2_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Next</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>582</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>Button2</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>7</ID>
+                  <Name>gcarRefHandshake</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">You choose not to shake his hand. You haven't made friends with any of the other passengers, why start now. Jax retracts his hand after giving him the cold shoulder. "It's fine, you don't know me, i don't know you. Expecting a hand shake might have been a little naive of me."</Text>
+                    <Height>86</Height>
+                    <Locked>False</Locked>
+                    <Width>1247</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label10</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">You choose not to shake his hand. You haven't made friends with any of the other passengers, why start now. Jax retracts his hand after giving him the cold shoulder. "It's fine, you don't know me, i don't know you. Expecting a hand shake might have been a little naive of me."</Text>
+                    <Height>86</Height>
+                    <Locked>False</Locked>
+                    <Width>1247</Width>
+                    <Left>18</Left>
+                    <Top>201</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label11</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Jax shuffles around in his seat between the fox and the large bear, reaching into his pocket for something as a small piece of paper falls out covered in names of people in the capital and numbers next to each one. "In debt to the barkeeps, eh lizard?" Jax reaches for the paper before the bear holds it just out of reach.</Text>
+                    <Height>84</Height>
+                    <Locked>False</Locked>
+                    <Width>1250</Width>
+                    <Left>18</Left>
+                    <Top>298</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label12</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Before you can interject, Jax hisses at the bear holding the page whilst bearing his teeth, prompting him to give the parchment back to him. The guard slides a small door open, letting the outside world slowly seep into the closed carriage. "We're approaching the capital sooner than we planned. collect your belongings and be ready to depart." She slides the small door shut again before the people in the carriage, seemingly all at once, begin to wrestle for their items. Accusations of theft and the snarling of more aggresive travellers fills the air as the carriage wobbles from side to side.</Text>
+                    <Height>135</Height>
+                    <Locked>False</Locked>
+                    <Width>1250</Width>
+                    <Left>18</Left>
+                    <Top>400</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>Label13</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>Button3_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Next</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>562</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>Button3</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+            </GUIs>
+          </GUIFolder>
+          <GUIFolder Name="outsidePherian">
+            <SubFolders />
+            <GUIs>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>8</ID>
+                  <Name>goutsidePherian1</Name>
+                </NormalGUI>
+                <Controls />
+              </GUIMain>
+            </GUIs>
+          </GUIFolder>
         </SubFolders>
-        <GUIs />
+        <GUIs>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>720</Height>
+              <Width>1280</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>10</BackgroundImage>
+              <ID>9</ID>
+              <Name>gsettings</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Sound Effects</Text>
+                <Height>31</Height>
+                <Locked>False</Locked>
+                <Width>145</Width>
+                <Left>420</Left>
+                <Top>225</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label14</Name>
+              </GUILabel>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text>Music</Text>
+                <Height>31</Height>
+                <Locked>False</Locked>
+                <Width>145</Width>
+                <Left>422</Left>
+                <Top>327</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>Label15</Name>
+              </GUILabel>
+              <GUISlider>
+                <OnChange>sfxSlider_OnChange</OnChange>
+                <HandleImage>0</HandleImage>
+                <HandleOffset>0</HandleOffset>
+                <BackgroundImage>0</BackgroundImage>
+                <MinValue>0</MinValue>
+                <MaxValue>100</MaxValue>
+                <Value>100</Value>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>405</Width>
+                <Left>422</Left>
+                <Top>273</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>sfxSlider</Name>
+              </GUISlider>
+              <GUISlider>
+                <OnChange />
+                <HandleImage>0</HandleImage>
+                <HandleOffset>0</HandleOffset>
+                <BackgroundImage>0</BackgroundImage>
+                <MinValue>0</MinValue>
+                <MaxValue>100</MaxValue>
+                <Value>100</Value>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>405</Width>
+                <Left>422</Left>
+                <Top>367</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>bgmSlider</Name>
+              </GUISlider>
+              <GUIButton>
+                <OnClick>btnBack_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Back</Text>
+                <Height>69</Height>
+                <Locked>False</Locked>
+                <Width>250</Width>
+                <Left>492</Left>
+                <Top>465</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>btnBack</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+        </GUIs>
       </GUIFolder>
     </GUIs>
     <InventoryItems>
@@ -1957,8 +2640,8 @@
     <Cursors>
       <MouseCursor>
         <ID>0</ID>
-        <HotspotX>16</HotspotX>
-        <HotspotY>15</HotspotY>
+        <HotspotX>5</HotspotX>
+        <HotspotY>6</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -1969,8 +2652,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>1</ID>
-        <HotspotX>15</HotspotX>
-        <HotspotY>16</HotspotY>
+        <HotspotX>7</HotspotX>
+        <HotspotY>7</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -1981,8 +2664,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>2</ID>
-        <HotspotX>15</HotspotX>
-        <HotspotY>16</HotspotY>
+        <HotspotX>7</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -1993,8 +2676,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>3</ID>
-        <HotspotX>16</HotspotX>
-        <HotspotY>15</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>7</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -2005,8 +2688,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>4</ID>
-        <HotspotX>16</HotspotX>
-        <HotspotY>16</HotspotY>
+        <HotspotX>7</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -2017,8 +2700,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>5</ID>
-        <HotspotX>15</HotspotX>
-        <HotspotY>15</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -2029,8 +2712,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>6</ID>
-        <HotspotX>16</HotspotX>
-        <HotspotY>17</HotspotY>
+        <HotspotX>7</HotspotX>
+        <HotspotY>7</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -2041,8 +2724,8 @@
       </MouseCursor>
       <MouseCursor>
         <ID>7</ID>
-        <HotspotX>16</HotspotX>
-        <HotspotY>16</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>7</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>2</Image>
         <View>0</View>
@@ -2386,9 +3069,9 @@
               <FileName>assets/mainMenuBG.jpg</FileName>
             </Source>
           </Sprite>
-          <Sprite Slot="2" Width="32" Height="32" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+          <Sprite Slot="2" Width="32" Height="32" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Centinu Software\Desktop\pherian assets\cursor.png</FileName>
+              <FileName>assets/mouse.png</FileName>
             </Source>
           </Sprite>
           <Sprite Slot="3" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
@@ -2414,6 +3097,16 @@
           <Sprite Slot="9" Width="1848" Height="457" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
             <Source>
               <FileName>assets/buttonhover.png</FileName>
+            </Source>
+          </Sprite>
+          <Sprite Slot="10" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+            <Source>
+              <FileName>assets/settings.jpg</FileName>
+            </Source>
+          </Sprite>
+          <Sprite Slot="11" Width="1280" Height="720" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+            <Source>
+              <FileName>assets/changelogBG.jpg</FileName>
             </Source>
           </Sprite>
         </Sprites>
@@ -2541,12 +3234,12 @@
                 <SourceFileName>assets/action.wav</SourceFileName>
                 <Index>1</Index>
                 <Type>3</Type>
-                <BundlingType>InGameEXE</BundlingType>
+                <BundlingType>InSeparateVOX</BundlingType>
                 <FileType>WAV</FileType>
                 <DefaultVolume>100</DefaultVolume>
                 <DefaultPriority>Normal</DefaultPriority>
                 <DefaultRepeat>False</DefaultRepeat>
-                <FileLastModifiedDate>2017-06-23 13:49:02Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2017-06-23 14:20:17Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
