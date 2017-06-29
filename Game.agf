@@ -629,11 +629,42 @@
             </UnloadedRooms>
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="outside pherian">
-            <SubFolders />
+            <SubFolders>
+              <UnloadedRoomFolder Name="follow jax">
+                <SubFolders />
+                <UnloadedRooms>
+                  <UnloadedRoom>
+                    <Number>10</Number>
+                    <Description xml:space="preserve">Follow Jax 1</Description>
+                  </UnloadedRoom>
+                  <UnloadedRoom>
+                    <Number>11</Number>
+                    <Description xml:space="preserve">Follow Jax inside</Description>
+                  </UnloadedRoom>
+                </UnloadedRooms>
+              </UnloadedRoomFolder>
+            </SubFolders>
             <UnloadedRooms>
               <UnloadedRoom>
                 <Number>6</Number>
                 <Description xml:space="preserve">Outside Pherian 1</Description>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Number>7</Number>
+                <Description xml:space="preserve">Outside Pherian 2</Description>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Port Cullis">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Number>8</Number>
+                <Description xml:space="preserve">Port Cullis 1</Description>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Number>9</Number>
+                <Description xml:space="preserve">Port Cullis 2</Description>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -679,7 +710,7 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">indev 1.8</Text>
+                    <Text xml:space="preserve">indev 2.0</Text>
                     <Height>27</Height>
                     <Locked>False</Locked>
                     <Width>171</Width>
@@ -819,7 +850,7 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">Version: indev 1.8</Text>
+                    <Text xml:space="preserve">Version: indev 2.0</Text>
                     <Height>26</Height>
                     <Locked>False</Locked>
                     <Width>200</Width>
@@ -847,7 +878,7 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">- added this screen :D</Text>
+                    <Text xml:space="preserve">- Initial public release.</Text>
                     <Height>39</Height>
                     <Locked>False</Locked>
                     <Width>326</Width>
@@ -856,48 +887,6 @@
                     <ZOrder>2</ZOrder>
                     <ID>2</ID>
                     <Name>Label18</Name>
-                  </GUILabel>
-                  <GUILabel>
-                    <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <Text xml:space="preserve">- added an options screen</Text>
-                    <Height>39</Height>
-                    <Locked>False</Locked>
-                    <Width>326</Width>
-                    <Left>87</Left>
-                    <Top>296</Top>
-                    <ZOrder>3</ZOrder>
-                    <ID>3</ID>
-                    <Name>Label19</Name>
-                  </GUILabel>
-                  <GUILabel>
-                    <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <Text xml:space="preserve">- added first encounter with a main character (Jax)</Text>
-                    <Height>30</Height>
-                    <Locked>False</Locked>
-                    <Width>563</Width>
-                    <Left>87</Left>
-                    <Top>333</Top>
-                    <ZOrder>4</ZOrder>
-                    <ID>4</ID>
-                    <Name>Label20</Name>
-                  </GUILabel>
-                  <GUILabel>
-                    <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <Text xml:space="preserve">- added location name info to header</Text>
-                    <Height>30</Height>
-                    <Locked>False</Locked>
-                    <Width>563</Width>
-                    <Left>87</Left>
-                    <Top>374</Top>
-                    <ZOrder>5</ZOrder>
-                    <ID>5</ID>
-                    <Name>Label21</Name>
                   </GUILabel>
                   <GUIButton>
                     <OnClick>btnChangeBack_OnClick</OnClick>
@@ -914,53 +903,39 @@
                     <Height>69</Height>
                     <Locked>False</Locked>
                     <Width>250</Width>
-                    <Left>531</Left>
+                    <Left>503</Left>
                     <Top>579</Top>
-                    <ZOrder>6</ZOrder>
-                    <ID>6</ID>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
                     <Name>btnChangeBack</Name>
                   </GUIButton>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text>TODO:</Text>
-                    <Height>26</Height>
+                    <Text xml:space="preserve">- Save and load dialogs instead of just F5 and F6</Text>
+                    <Height>31</Height>
                     <Locked>False</Locked>
-                    <Width>162</Width>
-                    <Left>774</Left>
-                    <Top>206</Top>
-                    <ZOrder>7</ZOrder>
-                    <ID>7</ID>
-                    <Name>Label22</Name>
+                    <Width>507</Width>
+                    <Left>87</Left>
+                    <Top>304</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>Label19</Name>
                   </GUILabel>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">- expand story to inside of the city</Text>
-                    <Height>38</Height>
+                    <Text xml:space="preserve">- branching storylines</Text>
+                    <Height>31</Height>
                     <Locked>False</Locked>
-                    <Width>389</Width>
-                    <Left>774</Left>
-                    <Top>262</Top>
-                    <ZOrder>8</ZOrder>
-                    <ID>8</ID>
-                    <Name>Label23</Name>
-                  </GUILabel>
-                  <GUILabel>
-                    <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <Text xml:space="preserve">- add a way to actually save your game.</Text>
-                    <Height>38</Height>
-                    <Locked>False</Locked>
-                    <Width>457</Width>
-                    <Left>774</Left>
-                    <Top>296</Top>
-                    <ZOrder>9</ZOrder>
-                    <ID>9</ID>
-                    <Name>Label24</Name>
+                    <Width>507</Width>
+                    <Left>87</Left>
+                    <Top>343</Top>
+                    <ZOrder>5</ZOrder>
+                    <ID>5</ID>
+                    <Name>Label20</Name>
                   </GUILabel>
                 </Controls>
               </GUIMain>
@@ -1024,7 +999,7 @@
                     <Height>23</Height>
                     <Locked>False</Locked>
                     <Width>86</Width>
-                    <Left>264</Left>
+                    <Left>243</Left>
                     <Top>0</Top>
                     <ZOrder>2</ZOrder>
                     <ID>2</ID>
@@ -1038,7 +1013,7 @@
                     <Height>23</Height>
                     <Locked>False</Locked>
                     <Width>167</Width>
-                    <Left>351</Left>
+                    <Left>330</Left>
                     <Top>0</Top>
                     <ZOrder>3</ZOrder>
                     <ID>3</ID>
@@ -1052,7 +1027,7 @@
                     <Height>24</Height>
                     <Locked>False</Locked>
                     <Width>104</Width>
-                    <Left>580</Left>
+                    <Left>550</Left>
                     <Top>0</Top>
                     <ZOrder>4</ZOrder>
                     <ID>4</ID>
@@ -1066,12 +1041,75 @@
                     <Height>30</Height>
                     <Locked>False</Locked>
                     <Width>372</Width>
-                    <Left>683</Left>
+                    <Left>653</Left>
                     <Top>0</Top>
                     <ZOrder>5</ZOrder>
                     <ID>5</ID>
                     <Name>locationLabel</Name>
                   </GUILabel>
+                  <GUIButton>
+                    <OnClick>btnInGameSave_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>TopMiddle</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Save</Text>
+                    <Height>30</Height>
+                    <Locked>False</Locked>
+                    <Width>50</Width>
+                    <Left>1057</Left>
+                    <Top>0</Top>
+                    <ZOrder>6</ZOrder>
+                    <ID>6</ID>
+                    <Name>btnInGameSave</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>Button5_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>TopMiddle</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Load</Text>
+                    <Height>30</Height>
+                    <Locked>False</Locked>
+                    <Width>50</Width>
+                    <Left>1129</Left>
+                    <Top>0</Top>
+                    <ZOrder>7</ZOrder>
+                    <ID>7</ID>
+                    <Name>Button5</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>Button6_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>TopMiddle</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Settings</Text>
+                    <Height>30</Height>
+                    <Locked>False</Locked>
+                    <Width>50</Width>
+                    <Left>1204</Left>
+                    <Top>0</Top>
+                    <ZOrder>8</ZOrder>
+                    <ID>8</ID>
+                    <Name>Button6</Name>
+                  </GUIButton>
                 </Controls>
               </GUIMain>
             </GUIs>
@@ -1089,7 +1127,7 @@
                   <Clickable>True</Clickable>
                   <Visibility>NormalButInitiallyOff</Visibility>
                   <PopupYPos>0</PopupYPos>
-                  <ZOrder>0</ZOrder>
+                  <ZOrder>1</ZOrder>
                   <BorderColor>0</BorderColor>
                   <Transparency>0</Transparency>
                   <BackgroundColor>0</BackgroundColor>
@@ -1207,7 +1245,7 @@
                   <Clickable>True</Clickable>
                   <Visibility>NormalButInitiallyOff</Visibility>
                   <PopupYPos>0</PopupYPos>
-                  <ZOrder>0</ZOrder>
+                  <ZOrder>1</ZOrder>
                   <BorderColor>0</BorderColor>
                   <Transparency>0</Transparency>
                   <BackgroundColor>0</BackgroundColor>
@@ -2202,7 +2240,7 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">You choose not to shake his hand. You haven't made friends with any of the other passengers, why start now. Jax retracts his hand after giving him the cold shoulder. "It's fine, you don't know me, i don't know you. Expecting a hand shake might have been a little naive of me."</Text>
+                    <Text xml:space="preserve">You choose not to shake his hand. You haven't made friends with any of the other passengers, why start now. Jax retracts his hand after giving him the cold shoulder. "It's fine, you don't know me, i don't know you. Expecting a hand shake might have been a little naive."</Text>
                     <Height>86</Height>
                     <Locked>False</Locked>
                     <Width>1247</Width>
@@ -2216,42 +2254,28 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">You choose not to shake his hand. You haven't made friends with any of the other passengers, why start now. Jax retracts his hand after giving him the cold shoulder. "It's fine, you don't know me, i don't know you. Expecting a hand shake might have been a little naive of me."</Text>
-                    <Height>86</Height>
-                    <Locked>False</Locked>
-                    <Width>1247</Width>
-                    <Left>18</Left>
-                    <Top>201</Top>
-                    <ZOrder>1</ZOrder>
-                    <ID>1</ID>
-                    <Name>Label11</Name>
-                  </GUILabel>
-                  <GUILabel>
-                    <TextAlignment>TopLeft</TextAlignment>
-                    <TextColor>0</TextColor>
-                    <Font>0</Font>
-                    <Text xml:space="preserve">Jax shuffles around in his seat between the fox and the large bear, reaching into his pocket for something as a small piece of paper falls out covered in names of people in the capital and numbers next to each one. "In debt to the barkeeps, eh lizard?" Jax reaches for the paper before the bear holds it just out of reach.</Text>
+                    <Text xml:space="preserve">Jax shuffles around in his seat between the fox and the large bear, reaching into his pocket for something as a small piece of paper falls out covered in names of people with numbers next to each one. "In debt to the barkeeps, eh lizard?" the bear asked as he picks it up, looking down on Jax and holding the paper higher every time he jumps up for it.</Text>
                     <Height>84</Height>
                     <Locked>False</Locked>
                     <Width>1250</Width>
                     <Left>18</Left>
-                    <Top>298</Top>
-                    <ZOrder>2</ZOrder>
-                    <ID>2</ID>
+                    <Top>208</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
                     <Name>Label12</Name>
                   </GUILabel>
                   <GUILabel>
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">Before you can interject, Jax hisses at the bear holding the page whilst bearing his teeth, prompting him to give the parchment back to him. The guard slides a small door open, letting the outside world slowly seep into the closed carriage. "We're approaching the capital sooner than we planned. collect your belongings and be ready to depart." She slides the small door shut again before the people in the carriage, seemingly all at once, begin to wrestle for their items. Accusations of theft and the snarling of more aggresive travellers fills the air as the carriage wobbles from side to side.</Text>
+                    <Text xml:space="preserve">Before you can interject, Jax hisses and claws at the bear, prompting him to quickly give the parchment back to him. The guard slides a small door open, letting the outside world slowly seep into the closed carriage. "We're approaching the capital sooner than we planned. collect your belongings and be ready to depart." She slides the small door shut again before the people in the carriage, seemingly all at once, begin to wrestle for their items. Accusations of theft and the snarling of more aggresive travellers fills the air as the carriage wobbles from side to side.</Text>
                     <Height>135</Height>
                     <Locked>False</Locked>
                     <Width>1250</Width>
                     <Left>18</Left>
-                    <Top>400</Top>
-                    <ZOrder>3</ZOrder>
-                    <ID>3</ID>
+                    <Top>310</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
                     <Name>Label13</Name>
                   </GUILabel>
                   <GUIButton>
@@ -2271,8 +2295,8 @@
                     <Width>250</Width>
                     <Left>18</Left>
                     <Top>562</Top>
-                    <ZOrder>4</ZOrder>
-                    <ID>4</ID>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
                     <Name>Button3</Name>
                   </GUIButton>
                 </Controls>
@@ -2280,7 +2304,195 @@
             </GUIs>
           </GUIFolder>
           <GUIFolder Name="outsidePherian">
-            <SubFolders />
+            <SubFolders>
+              <GUIFolder Name="FollowJax">
+                <SubFolders />
+                <GUIs>
+                  <GUIMain>
+                    <NormalGUI>
+                      <OnClick />
+                      <Height>690</Height>
+                      <Width>1280</Width>
+                      <Left>0</Left>
+                      <Top>30</Top>
+                      <Clickable>True</Clickable>
+                      <Visibility>NormalButInitiallyOff</Visibility>
+                      <PopupYPos>0</PopupYPos>
+                      <ZOrder>0</ZOrder>
+                      <BorderColor>0</BorderColor>
+                      <Transparency>0</Transparency>
+                      <BackgroundColor>0</BackgroundColor>
+                      <BackgroundImage>0</BackgroundImage>
+                      <ID>15</ID>
+                      <Name>gFollowJax1</Name>
+                    </NormalGUI>
+                    <Controls>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">You tentatively follow Jax into the woods, watching to make sure none of the guards or any other travellers see you escaping into the shadowy forests on your less than legal passage into the city. "Keep up kid, try not to fall over asnything. These roots can be tricky." The thickening forest in front of you seems impossible to navigate without the aid of Jax directing you through the easiest, and not so easy, paths and trails made by the smugglers over the past few years.</Text>
+                        <Height>139</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>18</Left>
+                        <Top>106</Top>
+                        <ZOrder>0</ZOrder>
+                        <ID>0</ID>
+                        <Name>Label36</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">After walking for what felt like the entire day, you come across a clearing in the woods but from the tree stumps, you can tell it's not natural. "We're getting close." Jax cheers, his ears perking up and his eyes widening. "It should be just through there." He says whilst pointing to a very well worn trail through the trees, stumps lining either side of the track. "Isn't it  little dangerous to be out this far? What about the Feral beasts?" you ask, looking around the forest for movement inbetween trees. Jax scoffs at what he thinks is a stupid question. "If there were any wild ones out this far, we'd have been luncheon hours ago."</Text>
+                        <Height>159</Height>
+                        <Locked>False</Locked>
+                        <Width>1248</Width>
+                        <Left>18</Left>
+                        <Top>250</Top>
+                        <ZOrder>1</ZOrder>
+                        <ID>1</ID>
+                        <Name>Label37</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">You continue to follow Jax through the forest using the smuggler's trail as it winds around the roots of oak trees and large yew's. The landscape is dotted with pits where metals have been mined from the surface, some have been here so long that they've become small shallow pools, filled with rain water and small pond life. You notice a thick column of smoke filling the sky as you clear yet another section of forest. "That's it!" Jax points to a small cottage with a large sign swinging above the front door. Before you can say anything, he rushes towards it, laughing gleefuly.</Text>
+                        <Height>159</Height>
+                        <Locked>False</Locked>
+                        <Width>1248</Width>
+                        <Left>18</Left>
+                        <Top>423</Top>
+                        <ZOrder>2</ZOrder>
+                        <ID>2</ID>
+                        <Name>Label38</Name>
+                      </GUILabel>
+                      <GUIButton>
+                        <OnClick>btnFollowJaxInside_OnClick</OnClick>
+                        <ClickAction>RunScript</ClickAction>
+                        <NewModeNumber>0</NewModeNumber>
+                        <ClipImage>False</ClipImage>
+                        <TextAlignment>Centred</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <PushedImage>0</PushedImage>
+                        <MouseoverImage>0</MouseoverImage>
+                        <Image>0</Image>
+                        <Text xml:space="preserve">Follow him inside</Text>
+                        <Height>69</Height>
+                        <Locked>False</Locked>
+                        <Width>250</Width>
+                        <Left>18</Left>
+                        <Top>594</Top>
+                        <ZOrder>3</ZOrder>
+                        <ID>3</ID>
+                        <Name>btnFollowJaxInside</Name>
+                      </GUIButton>
+                    </Controls>
+                  </GUIMain>
+                  <GUIMain>
+                    <NormalGUI>
+                      <OnClick />
+                      <Height>690</Height>
+                      <Width>1280</Width>
+                      <Left>0</Left>
+                      <Top>30</Top>
+                      <Clickable>True</Clickable>
+                      <Visibility>NormalButInitiallyOff</Visibility>
+                      <PopupYPos>0</PopupYPos>
+                      <ZOrder>0</ZOrder>
+                      <BorderColor>0</BorderColor>
+                      <Transparency>0</Transparency>
+                      <BackgroundColor>0</BackgroundColor>
+                      <BackgroundImage>0</BackgroundImage>
+                      <ID>16</ID>
+                      <Name>gFollowJaxInside</Name>
+                    </NormalGUI>
+                    <Controls>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">Jax burts through the door. The first person to notice him is the landlord of the tavern who you presume is a smuggler in disguise. "Archimedes!" the kobold yells, arms wide open as he walks further inside. The owl behind the bar puts down the tankard he was cleaning, his body language more aggresive and defensive than it was a couple of seconds ago. "Come to pay your tab, have you?" The owl crosses his arms and his expression becomes one of fury and anger.</Text>
+                        <Height>110</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>18</Left>
+                        <Top>106</Top>
+                        <ZOrder>0</ZOrder>
+                        <ID>0</ID>
+                        <Name>Label39</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">"Hey now... Can't that wait until later? I have company." He points back to you, still stood in the doorway. Archimedes looks at you and sighs. His expression turning from anger to one of pity almost instantaneously. "You'd better come in then before the guards figure out we have company." He goes back to cleaning his bar top of the residual mead and ale from the previous evening. The people of Pherian must really enjoy their alcohol.</Text>
+                        <Height>110</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>18</Left>
+                        <Top>225</Top>
+                        <ZOrder>1</ZOrder>
+                        <ID>1</ID>
+                        <Name>Label40</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">Jax hops up onto a stool that sits opposite archimedes at the bar and he begins to tap on the bar top, getting his attention. "I need to ask a favour..." Archimedes once again stops what he's doing to talk to Jax. "And what would that be?" he queries, bringing jax a small tankard of what must be an incredibly watered down ale. "What sort of favour?" he asks as jax gulps down the alcohol.</Text>
+                        <Height>110</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>18</Left>
+                        <Top>342</Top>
+                        <ZOrder>2</ZOrder>
+                        <ID>2</ID>
+                        <Name>Label41</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">"We... Uh..." "We need to use the tunnels." you say, casually interrupting the two old friends. Archimedes gives you a threatening glare before flicking his eyes back to Jax. "I wonder where your friend found out about these things. Seems to me that our secrets get less secretive every day, wouldn't you say?" Jax looks down into the empty tankard, not saying a word in response.</Text>
+                        <Height>110</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>18</Left>
+                        <Top>459</Top>
+                        <ZOrder>3</ZOrder>
+                        <ID>3</ID>
+                        <Name>Label42</Name>
+                      </GUILabel>
+                      <GUIButton>
+                        <OnClick />
+                        <ClickAction>RunScript</ClickAction>
+                        <NewModeNumber>0</NewModeNumber>
+                        <ClipImage>False</ClipImage>
+                        <TextAlignment>Centred</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <PushedImage>0</PushedImage>
+                        <MouseoverImage>0</MouseoverImage>
+                        <Image>0</Image>
+                        <Text xml:space="preserve">New Button</Text>
+                        <Height>69</Height>
+                        <Locked>False</Locked>
+                        <Width>250</Width>
+                        <Left>18</Left>
+                        <Top>588</Top>
+                        <ZOrder>4</ZOrder>
+                        <ID>4</ID>
+                        <Name>Button7</Name>
+                      </GUIButton>
+                    </Controls>
+                  </GUIMain>
+                </GUIs>
+              </GUIFolder>
+            </SubFolders>
             <GUIs>
               <GUIMain>
                 <NormalGUI>
@@ -2300,7 +2512,335 @@
                   <ID>8</ID>
                   <Name>goutsidePherian1</Name>
                 </NormalGUI>
-                <Controls />
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Everyone travelling in the carriage decide to pour out at once, still arguing, fighting, scratching and biting each other. The guards outside the city wrangle the more unruly ones and keep them away from the rest of the newcomers as Jax finally turns up, stepping out of the small, rickety wagon. "Traders certainly do have interesting customs. That bloody fox nearly tore my coat off." he grumbled to himself, brushing dust off of himself before taking another step.</Text>
+                    <Height>118</Height>
+                    <Locked>False</Locked>
+                    <Width>1251</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label11</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">You take a few moments to study the impressive, imposing fortifications keeping Pherian safe from attack. The walls must be at least thirty feet high, each block hand made from the tough granite mined from the Redbay cliffs. Your study of the masonry is cut short as Jax stands by your side, tugging on your tail.</Text>
+                    <Height>96</Height>
+                    <Locked>False</Locked>
+                    <Width>1252</Width>
+                    <Left>18</Left>
+                    <Top>226</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label25</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"What are your plans, friend?" He looks up at you, rubbing his hands, waiting for a response. "My... My what?" You ask him, confused. Jax sighs and points towards the port cullis of the city. "Look there, friend. A dozen guards or more in front of the cullis, the merchants have been arrested and the wagon's heading back off to gods know where. You're not getting anywhere near the city at this point. Not unless you want to end up in a cell overnight."</Text>
+                    <Height>96</Height>
+                    <Locked>False</Locked>
+                    <Width>1252</Width>
+                    <Left>18</Left>
+                    <Top>327</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label26</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>btnoutsidePherian1Next_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Continue</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>552</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>btnoutsidePherian1Next</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>11</ID>
+                  <Name>goutsidePherian2</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"The prison is on the other side of the walls, that's the reason why they were fighting. No one got badly hurt and they all got inside the city." Jax directs your attention to the forest before continuing to reel off his plan. "I have friends that run a smuggling group just outside of the city. They have a tavern but it's really just a front to hide their tunnels in and out of the city." He starts walking to the edge of the road before dissapearing into the trees, quickly stopping to poke his head back out near the roots of an oak. "Are you coming?" He asks with an excited expression growing across his face.</Text>
+                    <Height>170</Height>
+                    <Locked>False</Locked>
+                    <Width>1249</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label27</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>btnFollowJax_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Follow Jax</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>287</Left>
+                    <Top>479</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>btnFollowJax</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>btnFrontDoorToPherian_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Try the front door</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>700</Left>
+                    <Top>479</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>btnFrontDoorToPherian</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+            </GUIs>
+          </GUIFolder>
+          <GUIFolder Name="Port Cullis">
+            <SubFolders />
+            <GUIs>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>12</ID>
+                  <Name>gPortCullis1</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"I think i'm going to try my luck with the guards," you say, pointing to the row of guards stood outside the city. Jax seems sad to have to leave your company, even after only knowing you a short while. "Well, good luck. Hopefully this isn't goodbye." He gives you a warm smile before scuttling off into the dense forests that surround the city.  You make your way towards the men and women in armour stood in stunning suits of armour at the port cullis.</Text>
+                    <Height>124</Height>
+                    <Locked>False</Locked>
+                    <Width>1244</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label30</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">One of the guards, a stocky and broad shouldered equine with a spear, steps forward, cutting you off just before reaching the line of troops. "Halt, come no further!" She says, you do. Her imposing figure and booming voice would be enough to bring even Cerbohr himself to his knees. "What were you and the lizard talking about over there? Where did he go?" She asks in her booming voice. All the while, her figure grew in height as she edged towards you.</Text>
+                    <Height>116</Height>
+                    <Locked>False</Locked>
+                    <Width>1242</Width>
+                    <Left>18</Left>
+                    <Top>231</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label31</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text />
+                    <Height>116</Height>
+                    <Locked>False</Locked>
+                    <Width>1242</Width>
+                    <Left>18</Left>
+                    <Top>355</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label32</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">Her unrelenting questioning continues until someone from the other side of the cullis places his paw on her shoulder, making her stand bolt upright and stare straight ahead. At the same time, the other troops stand back in line in front of the entrance to the city.</Text>
+                    <Height>116</Height>
+                    <Locked>False</Locked>
+                    <Width>1242</Width>
+                    <Left>18</Left>
+                    <Top>355</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>Label33</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick>btnPortCullisNext_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Continue</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>501</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>btnPortCullisNext</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>14</ID>
+                  <Name>gPortCullis2</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"Calm yourself, huntress." The paw and oddly soothing voice belongs to a young rat in a robe of black and silver fibers that appear to dance in the light as he moves. "Greetings traveller, I am Samuel" He grabs your hand and walks you behind the guards towards a small writing desk that sits tucked away just before the cullis gate.</Text>
+                    <Height>84</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Labelx</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"You don't look like the others," he says whilst opening the book and taking his pen from his ink pot and looking for empty space on the page. "We already have your carriage number. We took that when we arrested your cohorts. All we need is the city you came from and how long you'll be here for." He finds the empty space that he was looking for, tapping the page with his finger before looking back up at you, awaiting a response.</Text>
+                    <Height>139</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>201</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label34</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"I'm from Icehold." you proudly boast. subconsciously puffing up your chest. "You're a little scrawny for an Iceholder, don't you think?" He jokingly asks, knocking the steam out of you and bruising your ego before continuing your interrogation. "How long do you think you'll be in the city, friend?" He looks back up and studies your face, waiting for your response. You answer by shrugging your shoulders and responding "I'm not too sure." He begins writing again whilst muttering to himself. "Indef... Indefin... is it an i or an a... Indefinite." he has a puzzled look on his face for a considerable ammount of time before handing you a piece of parchment with the seal of the king. "Think of this as a ferry ticket. Don't lose it."</Text>
+                    <Height>183</Height>
+                    <Locked>False</Locked>
+                    <Width>1251</Width>
+                    <Left>18</Left>
+                    <Top>330</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label35</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick />
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Enter Pherian</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>552</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>Button4</Name>
+                  </GUIButton>
+                </Controls>
               </GUIMain>
             </GUIs>
           </GUIFolder>
@@ -2316,7 +2856,7 @@
               <Clickable>True</Clickable>
               <Visibility>NormalButInitiallyOff</Visibility>
               <PopupYPos>0</PopupYPos>
-              <ZOrder>0</ZOrder>
+              <ZOrder>1</ZOrder>
               <BorderColor>0</BorderColor>
               <Transparency>0</Transparency>
               <BackgroundColor>0</BackgroundColor>
@@ -2408,6 +2948,76 @@
                 <ID>4</ID>
                 <Name>btnBack</Name>
               </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>690</Height>
+              <Width>1280</Width>
+              <Left>0</Left>
+              <Top>30</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>13</ID>
+              <Name>gbrickwall</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">You encounter a wall of invisible energy that stops you going any further. The world beyond you gets hazy at the edges and undefined the more you attempt to push beyond the veil.</Text>
+                <Height>51</Height>
+                <Locked>False</Locked>
+                <Width>1246</Width>
+                <Left>18</Left>
+                <Top>106</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label28</Name>
+              </GUILabel>
+              <GUIButton>
+                <OnClick>btnBackHome_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">Back to main menu</Text>
+                <Height>69</Height>
+                <Locked>False</Locked>
+                <Width>250</Width>
+                <Left>483</Left>
+                <Top>459</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>btnBackHome</Name>
+              </GUIButton>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Unfortunately, you have reached the limit of Pherian's first public build.</Text>
+                <Height>51</Height>
+                <Locked>False</Locked>
+                <Width>1246</Width>
+                <Left>18</Left>
+                <Top>177</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>Label29</Name>
+              </GUILabel>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -3200,10 +3810,10 @@
             <ScriptAndHeader_Script>
               <Script>
                 <FileName>GlobalScript.asc</FileName>
-                <Name />
+                <Name>Main Script</Name>
                 <Description />
-                <Author />
-                <Version />
+                <Author>MikoWulf</Author>
+                <Version>indev 2.0</Version>
                 <Key>764688079</Key>
                 <IsHeader>False</IsHeader>
               </Script>
