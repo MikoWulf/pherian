@@ -2,6 +2,7 @@
 // the game (local and global). Do not place functions here; rather,
 // place import definitions and #define names here to be used by all
 // scripts.
-import String gold;
+import int gold;
+import String goldAsText;
 import String speciesName;
 import String placeContent;

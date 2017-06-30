@@ -607,7 +607,12 @@
       <Message ID="999" />
     </GlobalMessages>
     <OldInteractionVariables />
-    <Plugins />
+    <Plugins>
+      <Plugin>
+        <FileName>ags_shell.dll</FileName>
+        <Data></Data>
+      </Plugin>
+    </Plugins>
     <Rooms>
       <UnloadedRoomFolder Name="Main">
         <SubFolders>
@@ -641,6 +646,14 @@
                     <Number>11</Number>
                     <Description xml:space="preserve">Follow Jax inside</Description>
                   </UnloadedRoom>
+                  <UnloadedRoom>
+                    <Number>12</Number>
+                    <Description xml:space="preserve">Pay Archimedes</Description>
+                  </UnloadedRoom>
+                  <UnloadedRoom>
+                    <Number>13</Number>
+                    <Description xml:space="preserve">Grand canal system.</Description>
+                  </UnloadedRoom>
                 </UnloadedRooms>
               </UnloadedRoomFolder>
             </SubFolders>
@@ -667,6 +680,29 @@
                 <Description xml:space="preserve">Port Cullis 2</Description>
               </UnloadedRoom>
             </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Pherian">
+            <SubFolders>
+              <UnloadedRoomFolder Name="With Jax">
+                <SubFolders />
+                <UnloadedRooms />
+              </UnloadedRoomFolder>
+              <UnloadedRoomFolder Name="By self">
+                <SubFolders>
+                  <UnloadedRoomFolder Name="first entry">
+                    <SubFolders />
+                    <UnloadedRooms>
+                      <UnloadedRoom>
+                        <Number>14</Number>
+                        <Description xml:space="preserve">Enter Pherian by self</Description>
+                      </UnloadedRoom>
+                    </UnloadedRooms>
+                  </UnloadedRoomFolder>
+                </SubFolders>
+                <UnloadedRooms />
+              </UnloadedRoomFolder>
+            </SubFolders>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
@@ -819,11 +855,32 @@
                     <Height>75</Height>
                     <Locked>False</Locked>
                     <Width>311</Width>
-                    <Left>461</Left>
-                    <Top>517</Top>
+                    <Left>652</Left>
+                    <Top>502</Top>
                     <ZOrder>5</ZOrder>
                     <ID>5</ID>
                     <Name>Changelogmm</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick>Button8_OnClick</OnClick>
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text>Donate</Text>
+                    <Height>75</Height>
+                    <Locked>False</Locked>
+                    <Width>311</Width>
+                    <Left>269</Left>
+                    <Top>502</Top>
+                    <ZOrder>6</ZOrder>
+                    <ID>6</ID>
+                    <Name>Button8</Name>
                   </GUIButton>
                 </Controls>
               </GUIMain>
@@ -2051,7 +2108,7 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">You sit in a rather run down carriage being pulled by large feral beasts. Your transport probably started its life out as a luxurious four passenger cart but it's currently carrying 7 passengers, including yourself along the meandering paths of Casan, towards Pherian, the Capital City. They each carry their own cargo. Some carry many chests full of wares, others carry a lot less, but from what you can see, they are of a much higher quality. The coachman stops in a small village on the borderlands of Kahm as a small kobold hops into the wagon and politely budges his way into a small space between an arctic fox and a rather large bear.</Text>
+                    <Text xml:space="preserve">You sit in a rather run down carriage being pulled by large feral beasts. Your transport probably started its life out as a luxurious four passenger cart but it's currently carrying 7 passengers, including yourself along the meandering paths of Casan, towards The kingdom's capital. They each carry their own cargo. Some carry many chests full of wares, others carry a lot less, but from what you can see, they are of a much higher quality. The coachman stops in a small village on the borderlands of Kahm as a small kobold hops into the wagon and politely budges his way into a small space between an arctic fox and a rather large bear.</Text>
                     <Height>139</Height>
                     <Locked>False</Locked>
                     <Width>1245</Width>
@@ -2065,8 +2122,8 @@
                     <TextAlignment>TopLeft</TextAlignment>
                     <TextColor>0</TextColor>
                     <Font>0</Font>
-                    <Text xml:space="preserve">"The name's Jax," the kobold boasts, holding his hand outstretched in your direction. Everyone in the carriage turns to look at the small creature. You wager that he must be roughly 2 feet tall and even that's when he's wearing his shoes.</Text>
-                    <Height>86</Height>
+                    <Text xml:space="preserve">The small reptile sits and twiddles his thumbs for a while as the carriage rocks over the uneven path. He studies everyone in the carriage, sighing as the carriage stays quiet. Jax meets your eyes with his, taking this moment as his perfect oppurtunity to break the tension. He hops up onto a large chest sitting in the gangway and outstretches his hand. "Greetings. I'm Jax." He boasts, flicking his eyes between his hand and your face as the other passengers look at him sideways.</Text>
+                    <Height>139</Height>
                     <Locked>False</Locked>
                     <Width>1245</Width>
                     <Left>18</Left>
@@ -2457,7 +2514,7 @@
                         <TextAlignment>TopLeft</TextAlignment>
                         <TextColor>0</TextColor>
                         <Font>0</Font>
-                        <Text xml:space="preserve">"We... Uh..." "We need to use the tunnels." you say, casually interrupting the two old friends. Archimedes gives you a threatening glare before flicking his eyes back to Jax. "I wonder where your friend found out about these things. Seems to me that our secrets get less secretive every day, wouldn't you say?" Jax looks down into the empty tankard, not saying a word in response.</Text>
+                        <Text xml:space="preserve">"We... Uh... We need a back way into the city, if you catch my drift." archimedes nods his heads and directs both of you to the cellar, grabbing a handful of things from under the bar before following the two of you down. "You're in luck, guys. You got my last passage papers." Jax goes to grab them but the owl snatches them back. "30 gold a piece," he growls.</Text>
                         <Height>110</Height>
                         <Locked>False</Locked>
                         <Width>1245</Width>
@@ -2468,7 +2525,7 @@
                         <Name>Label42</Name>
                       </GUILabel>
                       <GUIButton>
-                        <OnClick />
+                        <OnClick>Button7_OnClick</OnClick>
                         <ClickAction>RunScript</ClickAction>
                         <NewModeNumber>0</NewModeNumber>
                         <ClipImage>False</ClipImage>
@@ -2478,15 +2535,99 @@
                         <PushedImage>0</PushedImage>
                         <MouseoverImage>0</MouseoverImage>
                         <Image>0</Image>
-                        <Text xml:space="preserve">New Button</Text>
+                        <Text xml:space="preserve">Pay archimedes</Text>
                         <Height>69</Height>
                         <Locked>False</Locked>
                         <Width>250</Width>
                         <Left>18</Left>
-                        <Top>588</Top>
+                        <Top>591</Top>
                         <ZOrder>4</ZOrder>
                         <ID>4</ID>
                         <Name>Button7</Name>
+                      </GUIButton>
+                    </Controls>
+                  </GUIMain>
+                  <GUIMain>
+                    <NormalGUI>
+                      <OnClick />
+                      <Height>690</Height>
+                      <Width>1280</Width>
+                      <Left>0</Left>
+                      <Top>30</Top>
+                      <Clickable>True</Clickable>
+                      <Visibility>NormalButInitiallyOff</Visibility>
+                      <PopupYPos>0</PopupYPos>
+                      <ZOrder>0</ZOrder>
+                      <BorderColor>0</BorderColor>
+                      <Transparency>0</Transparency>
+                      <BackgroundColor>0</BackgroundColor>
+                      <BackgroundImage>0</BackgroundImage>
+                      <ID>17</ID>
+                      <Name>gPayArchimedes</Name>
+                    </NormalGUI>
+                    <Controls>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">You begrudgingly cough up the 30 gold that archimedes quickly and gleefully snatches off of you. You look to jax to see him emptying his pockets into the owl's open palm, counting out loud as he goes. "Consider your tab paid, jax." He hands the two of you pieces of cloth paper containing the king's seal and a fake date of entry. "It's probably best not to let anybody have a good look at those. They've been here since the tavern opened." He smiles and moves a book case aside, revealing a small hole at the base of the wall just big enough to fit yourself through. "A pleasure seeing you again, Jax." his voice gets quieter as you climb further down under the tavern.</Text>
+                        <Height>167</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>18</Left>
+                        <Top>106</Top>
+                        <ZOrder>0</ZOrder>
+                        <ID>0</ID>
+                        <Name>Label21</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">"I've always despised that man." jax sighs, looking back up at the small opening the two of you dropped down from. "How long will it take to get into the city from here?" you ask jax as he takes a torch off of the wall, using the fire to light up the tunnels ahead of you both. "No longer than an hour i wager. It's a straight path until we hit the underground canal system. Then we just have to find an exit to the surface." he walks off down the tunnel, his small feet making amusing pitter patters as they hit the stones that line the floor.</Text>
+                        <Height>135</Height>
+                        <Locked>False</Locked>
+                        <Width>1246</Width>
+                        <Left>18</Left>
+                        <Top>276</Top>
+                        <ZOrder>1</ZOrder>
+                        <ID>1</ID>
+                        <Name>Label22</Name>
+                      </GUILabel>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">The two of you have been walking under the ground for a lot longer than an hour at this point. Jax has apologised profusely for delaying the voyage into the city but your luck turns as you happen upon crude archway leading to a small room, unused for years. "This must be it!" Jax exclaims as he rushes to the bars on the wall, sliding them from their housing as he turns around, revealing his cheesy grin. "Friend, welcome to the Pherian grand canal system."</Text>
+                        <Height>100</Height>
+                        <Locked>False</Locked>
+                        <Width>1249</Width>
+                        <Left>19</Left>
+                        <Top>426</Top>
+                        <ZOrder>2</ZOrder>
+                        <ID>2</ID>
+                        <Name>Label23</Name>
+                      </GUILabel>
+                      <GUIButton>
+                        <OnClick>Button9_OnClick</OnClick>
+                        <ClickAction>RunScript</ClickAction>
+                        <NewModeNumber>0</NewModeNumber>
+                        <ClipImage>False</ClipImage>
+                        <TextAlignment>Centred</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <PushedImage>0</PushedImage>
+                        <MouseoverImage>0</MouseoverImage>
+                        <Image>0</Image>
+                        <Text xml:space="preserve">Enter the canal system</Text>
+                        <Height>69</Height>
+                        <Locked>False</Locked>
+                        <Width>250</Width>
+                        <Left>19</Left>
+                        <Top>589</Top>
+                        <ZOrder>3</ZOrder>
+                        <ID>3</ID>
+                        <Name>Button9</Name>
                       </GUIButton>
                     </Controls>
                   </GUIMain>
@@ -2820,7 +2961,7 @@
                     <Name>Label35</Name>
                   </GUILabel>
                   <GUIButton>
-                    <OnClick />
+                    <OnClick>Button4_OnClick</OnClick>
                     <ClickAction>RunScript</ClickAction>
                     <NewModeNumber>0</NewModeNumber>
                     <ClipImage>False</ClipImage>
@@ -2843,6 +2984,165 @@
                 </Controls>
               </GUIMain>
             </GUIs>
+          </GUIFolder>
+          <GUIFolder Name="under pherian">
+            <SubFolders />
+            <GUIs>
+              <GUIMain>
+                <NormalGUI>
+                  <OnClick />
+                  <Height>690</Height>
+                  <Width>1280</Width>
+                  <Left>0</Left>
+                  <Top>30</Top>
+                  <Clickable>True</Clickable>
+                  <Visibility>NormalButInitiallyOff</Visibility>
+                  <PopupYPos>0</PopupYPos>
+                  <ZOrder>0</ZOrder>
+                  <BorderColor>0</BorderColor>
+                  <Transparency>0</Transparency>
+                  <BackgroundColor>0</BackgroundColor>
+                  <BackgroundImage>0</BackgroundImage>
+                  <ID>18</ID>
+                  <Name>gpherianCanals</Name>
+                </NormalGUI>
+                <Controls>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">The two of you walk through the huge space as jax holds the torch as high as he can, throwing the soft light from the torch around the room. "Don't fall in," he says whilst chuckling in his usual tone. You stand in the center walkway of the Pherian canal system, the two rushing bodies of water either side of you. "This is incredible. How long has this been under here?" you ask with a wide eyed look of wonder growing across your face. Jax ponders for a few seconds before continuing.</Text>
+                    <Height>135</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>106</Top>
+                    <ZOrder>0</ZOrder>
+                    <ID>0</ID>
+                    <Name>Label24</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"Well, i guess it's been here as long as the city. People need supplies, water is a perfect way to deliver them." He shines the torch over to his right to reveal a decorative carving of a phoenix fighting back hordes of lich. "Look at that." He pauses for a while, admiring the stonework. "You never see craftsmanship like that anywhere nowadays." The symbol belonged to Queen Amelia who ruled the kingdom of Casan over five hundred years ago. "It's been here about as long as that has." Jax walks further into the cavern and the light follows behind him, slowly leaving the world around you both in darkness again, the sigil dissapearing back into the shadows.</Text>
+                    <Height>166</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>243</Top>
+                    <ZOrder>1</ZOrder>
+                    <ID>1</ID>
+                    <Name>Label43</Name>
+                  </GUILabel>
+                  <GUILabel>
+                    <TextAlignment>TopLeft</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <Text xml:space="preserve">"We can get out to the surface through that." Jax points to a ladder that's probably as ancient as this waterway itself. The ladder, if could call it that, is a series of deep hollowed out holds in one of the pillars. It seems as though the people who built this system weren't too interested in keeping people safe. Jax chuckles under his breath before turning to you with a wide smile. "After you, my friend."</Text>
+                    <Height>135</Height>
+                    <Locked>False</Locked>
+                    <Width>1245</Width>
+                    <Left>18</Left>
+                    <Top>410</Top>
+                    <ZOrder>2</ZOrder>
+                    <ID>2</ID>
+                    <Name>Label44</Name>
+                  </GUILabel>
+                  <GUIButton>
+                    <OnClick />
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Volunteer to climb first</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>18</Left>
+                    <Top>563</Top>
+                    <ZOrder>3</ZOrder>
+                    <ID>3</ID>
+                    <Name>Button10</Name>
+                  </GUIButton>
+                  <GUIButton>
+                    <OnClick />
+                    <ClickAction>RunScript</ClickAction>
+                    <NewModeNumber>0</NewModeNumber>
+                    <ClipImage>False</ClipImage>
+                    <TextAlignment>Centred</TextAlignment>
+                    <TextColor>0</TextColor>
+                    <Font>0</Font>
+                    <PushedImage>0</PushedImage>
+                    <MouseoverImage>0</MouseoverImage>
+                    <Image>0</Image>
+                    <Text xml:space="preserve">Make Jax climb first</Text>
+                    <Height>69</Height>
+                    <Locked>False</Locked>
+                    <Width>250</Width>
+                    <Left>325</Left>
+                    <Top>563</Top>
+                    <ZOrder>4</ZOrder>
+                    <ID>4</ID>
+                    <Name>Button11</Name>
+                  </GUIButton>
+                </Controls>
+              </GUIMain>
+            </GUIs>
+          </GUIFolder>
+          <GUIFolder Name="Pherian section 1">
+            <SubFolders>
+              <GUIFolder Name="By yourself">
+                <SubFolders />
+                <GUIs>
+                  <GUIMain>
+                    <NormalGUI>
+                      <OnClick />
+                      <Height>690</Height>
+                      <Width>1280</Width>
+                      <Left>0</Left>
+                      <Top>30</Top>
+                      <Clickable>True</Clickable>
+                      <Visibility>NormalButInitiallyOff</Visibility>
+                      <PopupYPos>0</PopupYPos>
+                      <ZOrder>0</ZOrder>
+                      <BorderColor>0</BorderColor>
+                      <Transparency>0</Transparency>
+                      <BackgroundColor>0</BackgroundColor>
+                      <BackgroundImage>0</BackgroundImage>
+                      <ID>19</ID>
+                      <Name>gpherianSection1Y1</Name>
+                    </NormalGUI>
+                    <Controls>
+                      <GUILabel>
+                        <TextAlignment>TopLeft</TextAlignment>
+                        <TextColor>0</TextColor>
+                        <Font>0</Font>
+                        <Text xml:space="preserve">You enter the brihom district, famed for its artists quarter and its large brewery that makes the most famous brand of orange bloosom mead in Casan. "You there!" a loud, booming voice calls out. You turn your head so fast you nearly pull a muscle and you see a large lion pointing to you, motioning that you should come closer. You navigate yourself through the busy street and narrowly avoid one citizen on the warpath, arms flailing, teeth bared. From what you could catch, she was talking to herself about a useless husband. when you finally reach the lion, </Text>
+                        <Height>173</Height>
+                        <Locked>False</Locked>
+                        <Width>1245</Width>
+                        <Left>19</Left>
+                        <Top>106</Top>
+                        <ZOrder>0</ZOrder>
+                        <ID>0</ID>
+                        <Name>Label45</Name>
+                      </GUILabel>
+                    </Controls>
+                  </GUIMain>
+                </GUIs>
+              </GUIFolder>
+              <GUIFolder Name="with Jax">
+                <SubFolders />
+                <GUIs />
+              </GUIFolder>
+            </SubFolders>
+            <GUIs />
           </GUIFolder>
         </SubFolders>
         <GUIs>
@@ -3813,7 +4113,7 @@
                 <Name>Main Script</Name>
                 <Description />
                 <Author>MikoWulf</Author>
-                <Version>indev 2.0</Version>
+                <Version>indev 2.8</Version>
                 <Key>764688079</Key>
                 <IsHeader>False</IsHeader>
               </Script>
